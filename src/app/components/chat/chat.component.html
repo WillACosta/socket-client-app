@@ -1,0 +1,12 @@
+<h1>Chat Message</h1>
+<hr>
+<br>
+
+
+
+<br>
+<form (ngSubmit)="send">
+    <input type="text" [(ngModel)]="mensagem" class="form-control" name="mensagem" placeholder="Digite algo..."
+        autofocus autocomplete="off">
+    <button class="btn btn-primary mt-2" type="submit" (click)="send()">Send</button>
+</form>
