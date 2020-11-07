@@ -1,8 +1,8 @@
-import { WebsocketsService } from 'src/app/services/websockets.service';
-import { Injectable } from '@angular/core';
+import { WebsocketsService } from "src/app/services/websockets.service";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ChatService {
   constructor(public wsService: WebsocketsService) {}
@@ -10,14 +10,15 @@ export class ChatService {
   // Envia as mensagems
   sendMessage(message: string) {
     const payload = {
-      message,
+      from: this.wsService.getUser().name,
+      body: message,
     };
 
-    this.wsService.emit('message', JSON.stringify(payload));
+    this.wsService.emit("message", JSON.stringify(payload));
   }
 
   // Recupera as mensagems do servidor e retorna um observable
   getMessage() {
-    return this.wsService.listen('stream');
+    return this.wsService.listen("stream");
   }
 }

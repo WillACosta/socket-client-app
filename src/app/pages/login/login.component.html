@@ -1,0 +1,15 @@
+<h2>Entrar no chat</h2>
+<hr>
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form (ngSubmit)="login()" class="p-4">
+            <input type="text" [(ngModel)]="userName" [ngModelOptions]="{ standalone: true }" class="form-control"
+                placeholder="Nome de usuário" autofocus autocomplete="off">
+        </form>
+
+        <button (click)="login()" type="submit" [disabled]="!userName" class="btn btn-primary mt-1 btn-block">
+            Entrar
+        </button>
+
+    </div>
+</div>
