@@ -24,6 +24,7 @@ export class WebsocketsService {
     this.socket.on("connect", () => {
       console.log("Sevidor Conectado");
       this.serverStatus = true;
+      this.getStorage(); // Recuperar os usuários se o servidor reiniciar
     });
 
     this.socket.on("disconnect", () => {
@@ -61,7 +62,7 @@ export class WebsocketsService {
   getStorage() {
     if (localStorage.getItem("chatUser")) {
       this.user = JSON.parse(localStorage.getItem("chatUser"));
-      this.loginWS(this.user.name); // Salva o nome do usuário no backend
+      this.loginWS(this.user.name); // Atualiza o usuário no backend sempre que recarregar a página
     }
   }
 }

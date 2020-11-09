@@ -23,7 +23,12 @@ export class ChatComponent implements OnInit, OnDestroy {
     this.chatSubscription = this.chatService
       .getMessage()
       .subscribe((msg: any) => {
-        this.messages.push(JSON.parse(msg));
+        let receivedMessage;
+        typeof msg === "string"
+          ? (receivedMessage = JSON.parse(msg))
+          : (receivedMessage = msg);
+
+        this.messages.push(receivedMessage);
 
         /** Rolar scroll para novas mensagens */
         setTimeout(() => {
@@ -39,7 +44,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   send() {
     if (this.mensagem.trim().length === 0) return;
 
-    this.chatService.sendMessage(JSON.stringify(this.mensagem));
+    this.chatService.sendMessage(this.mensagem);
     this.mensagem = "";
   }
 }

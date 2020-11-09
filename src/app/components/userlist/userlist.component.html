@@ -1,1 +1,14 @@
-<p>userlist works!</p>
+<p>Users</p>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of activeUsers$ | async">
+        {{ user.userName }}
+        <span class="badge badge-primary">
+            {{ user.room }}
+        </span>
+        <br>
+        <span class="badge badge-info">
+            {{ user.id }}
+        </span>
+    </li>
+</ul>

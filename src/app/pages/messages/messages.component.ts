@@ -7,7 +7,7 @@ import { WebsocketsService } from "src/app/services/websockets.service";
   styleUrls: ["./messages.component.scss"],
 })
 export class MessagesComponent implements OnInit {
-  constructor(private wsService: WebsocketsService) {}
+  constructor(public wsService: WebsocketsService) {}
 
   ngOnInit(): void {}
 }

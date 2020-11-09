@@ -15,3 +15,9 @@ Aplicação Front-End desenvolvida em angular para comunicação em tempo real u
 - Em um terminal de sua preferência
   - Instale as dependências com `npm install`
   - Execute a aplicação com `ng serve -o`
+
+## Checklist
+
+- [] Criar interface no Figma
+- [] Implementar interface com CSS FlexBox e GRID
+- [] Documentar API REST
