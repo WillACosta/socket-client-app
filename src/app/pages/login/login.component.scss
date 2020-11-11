@@ -1,3 +1,5 @@
+@import "../../../assets/scss/theme";
+
 .intro-section {
     display: flex;
     flex-direction: column;
@@ -18,4 +20,18 @@
 
 .intro-group input {
     width: 100%;
+}
+
+.logo-img {
+    max-width: 100%;
+    padding-top: 1.2rem;
+}
+
+.btn-login {
+    background: $purple-fluorescing-4;
+    color: $white;
+}
+
+.sstatus-area {
+    font-size: 0.85rem;
 }

@@ -3,11 +3,11 @@
 <ul class="list-group">
     <li class="list-group-item" *ngFor="let user of activeUsers$ | async">
         {{ user.userName }}
-        <span class="badge badge-primary">
+        <span class="badge-dark text-warning">
             {{ user.room }}
         </span>
         <br>
-        <span class="badge badge-info">
+        <span class="badge-info text-info">
             {{ user.id }}
         </span>
     </li>

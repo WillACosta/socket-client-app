@@ -20,7 +20,7 @@ Aplicação Front-End desenvolvida em angular para comunicação em tempo real u
 
 - [] Criar interface no Figma
 - [] Implementar interface com CSS FlexBox e GRID
-  - [] Login
+  - [] Login | Animação de 'entrando'
   - [] Chat
   - [] Lista de usuários
   - [] Adicionar indicador de status do servidor
