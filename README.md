@@ -1,5 +1,7 @@
 ## Live Chat
 
+<img src="https://i.imgur.com/HOqB2lX.png" alt="live-chat-login">
+
 Aplicação Front-End desenvolvida em angular para comunicação em tempo real utilizando a tecnologia de websockets.
 
 ## ⛏️ Construído com 
@@ -18,10 +20,11 @@ Aplicação Front-End desenvolvida em angular para comunicação em tempo real u
 
 ## Checklist
 
-- [] Criar interface no Figma
-- [] Implementar interface com CSS FlexBox e GRID
-  - [] Login | Animação de 'entrando'
-  - [] Chat
-  - [] Lista de usuários
-  - [] Adicionar indicador de status do servidor
-- [] Documentar API REST
+- [ ]  Criar interface no Figma
+
+- [ ] Implementar interface com CSS FlexBox e GRID
+  - [ ] Login | Animação de 'entrando'
+  - [ ] Chat
+  - [ ] Lista de usuários
+  - [ ] Adicionar indicador de status do servidor
+- [ ] Documentar API REST
