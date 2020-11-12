@@ -26,7 +26,7 @@ Aplicação Front-End desenvolvida em angular para comunicação em tempo real u
   - [ ] Login | Animação de 'entrando'
   - [ ] Chat
   - [ ] Lista de usuários
-  - [ ] Adicionar indicador de status do servidor
+  - [X] Adicionar indicador de status do servidor
 - [ ] Documentar API REST
 
 ### Informações
