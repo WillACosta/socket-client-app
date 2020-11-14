@@ -30,4 +30,8 @@ export class ChatService {
   getActiveUsers() {
     return this.wsService.listen("active-users");
   }
+
+  emitActivedUsers() {
+    this.wsService.emit("get-users");
+  }
 }

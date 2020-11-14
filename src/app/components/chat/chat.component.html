@@ -1,16 +1,20 @@
-<h1>Chat Message</h1>
-<hr>
-<br>
+<div class="app-area">
+    <div id="chat-messages">
+        <!-- <li class="list-group-item chat-inbox-msg mt-2 ml-2">
+            Você: Apenas mais uma mensagem sem sentido
+        </li>
+        <li class="list-group-item chat-inbox-msg-res mt-2 mr-2">
+            Fulano: Beleza então
+        </li>     -->
+        <li class="list-group-item chat-inbox-msg mt-2 ml-2" *ngFor="let msg of messages">
+            {{ msg.from }} : {{ msg.message }}
+        </li>
+    </div>
 
-<div id="chat-messages">
-    <li class="list-group-item" *ngFor="let msg of messages">
-        {{ msg.from }} : {{ msg.message }}
-    </li>
+    <form (ngSubmit)="send">
+        <input type="text" [(ngModel)]="mensagem" class="form-control chat-input" name="mensagem"
+            placeholder="Envie algo pra galera..." autofocus autocomplete="off">
+        <button class="btn btn-primary mt-2 send-button" type="submit" (click)="send()"><i
+                class="fas fa-paper-plane"></i></button>
+    </form>
 </div>
-
-<br>
-<form (ngSubmit)="send">
-    <input type="text" [(ngModel)]="mensagem" class="form-control chat-input" name="mensagem"
-        placeholder="Digite algo..." autofocus autocomplete="off">
-    <button class="btn btn-primary mt-2" type="submit" (click)="send()">Send</button>
-</form>

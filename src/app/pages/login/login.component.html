@@ -1,7 +1,7 @@
 <div class="intro-section">
     <img src="../../../assets/img/undraw_Group_chat_re_frmo.svg" alt="live-chat-imagem" class="logo-img">
     <div class="intro-group">
-        <h2 class="">Olá, Vamos de Live Chat?</h2>
+        <h2 class="">Vamos de Live Chat?</h2>
         <p>É muito simples, é só clicar em entrar<br>Tá esperando o quê?</p>
         <form (ngSubmit)="login()">
             <input type="text" [(ngModel)]="userName" [ngModelOptions]="{ standalone: true }" class="form-control"
@@ -9,7 +9,8 @@
         </form>
     </div>
 
-    <button (click)="login()" type="submit" [disabled]="!userName" class="btn btn-login mt-1 btn-block">
+    <button (click)="login()" type="submit" [disabled]="!userName || !wsService.serverStatus"
+        class="btn btn-login mt-1 btn-block">
         Entrar
     </button>
 

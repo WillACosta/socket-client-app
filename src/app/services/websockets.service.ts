@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 
 import { Socket } from "ngx-socket-io";
 import { User } from "../models/user.model";
@@ -10,7 +11,7 @@ export class WebsocketsService {
   public serverStatus = false;
   private user: User = null;
 
-  constructor(private socket: Socket) {
+  constructor(private socket: Socket, private router: Router) {
     this.getStorage();
     this.checkStatus();
   }
@@ -53,6 +54,14 @@ export class WebsocketsService {
         resolve();
       });
     });
+  }
+
+  logoutWS() {
+    this.user = null;
+    localStorage.removeItem("chatUser");
+
+    this.emit("set-user", { userName: "no-name" }, () => {});
+    this.router.navigate(["/"]);
   }
 
   saveOnStorage() {

@@ -1,0 +1,14 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 160px auto;
+}
+
+@media screen and (max-width: 560px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    app-chat {
+        margin-top: 5rem;
+    }
+}

@@ -1,0 +1,84 @@
+@import "../../../assets/scss/theme";
+
+.user-info {
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+
+    // background-color: $black;
+    color: $white;
+}
+
+.sidebar-nav {
+    position: fixed;
+    height: 100%;
+
+    border: none;
+    background-color: $purple-fluorescing-4;
+    transition: width 200ms ease;
+}
+
+.sidebar-navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    padding-left: 0;
+}
+
+.sidebar-nav-item {
+    padding: 0.5rem;
+    background-color: $purple-fluorescing-5;
+    width: 100%;
+}
+
+ul li:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: $white;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 0.2s;
+}
+
+.exit-area:hover {
+    // @extend .sidebar-nav-item;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+    .sidebar-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar-navigation {
+        display: grid;
+        grid-template-columns: 120px 1fr 1fr;
+        gap: 1.43rem;
+
+        margin: 0;
+    }
+
+    .sidebar-nav-item {
+        padding: 0.5rem;
+        background-color: $purple-fluorescing-5;
+        width: 100%;
+        height: 100%;
+    }
+
+    ul li:last-child {
+        margin-top: 0 !important;
+        margin-left: auto;
+    }
+}

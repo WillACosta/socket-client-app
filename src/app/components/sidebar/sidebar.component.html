@@ -1,0 +1,20 @@
+<nav class="sidebar-nav">
+    <ul class="sidebar-navigation">
+        <li class="user-info">
+            <i class="fas {{ currentIcon }}"></i>
+            Olá, {{ wsService.getUser().name }}
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="nav-link">
+                <i class="fas fa-comments fa-2x"></i>&nbsp;
+                Chat Geral
+            </a>
+        </li>
+        <li class="exit-area" (click)="logout()">
+            <a class="nav-link">
+                <i class="fas fa-sign-out-alt fa-1x"></i>&nbsp;
+                Sair
+            </a>
+        </li>
+    </ul>
+</nav>
