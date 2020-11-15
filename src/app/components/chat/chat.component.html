@@ -6,7 +6,9 @@
         <li class="list-group-item chat-inbox-msg-res mt-2 mr-2">
             Fulano: Beleza então
         </li>     -->
-        <li class="list-group-item chat-inbox-msg mt-2 ml-2" *ngFor="let msg of messages">
+
+        <li [class]="msg.from === wsService.getUser().name ? 'list-group-item chat-inbox-msg mt-2 ml-2' : 'list-group-item chat-inbox-msg-res mt-2 ml-2'"
+            *ngFor="let msg of messages">
             {{ msg.from }} : {{ msg.message }}
         </li>
     </div>

@@ -1,12 +1,12 @@
 @import "../../../assets/scss/theme";
 
 #chat-messages {
-    height: 430px;
+    height: 80vh;
     border: 1px solid #eded;
     border-radius: 25px;
     overflow-y: scroll;
-
-    padding-bottom: 0.3rem;
+    padding: 1.2rem;
+    padding-bottom: 1.2rem;
 }
 
 #chat-messages::-webkit-scrollbar {
@@ -17,11 +17,6 @@
     background-color: #6649b8;
 }
 
-form {
-    display: flex;
-    gap: 15px;
-}
-
 .chat-input {
     margin-top: 10px;
 
@@ -29,6 +24,11 @@ form {
         box-shadow: none;
         border: 0.1px solid $purple-fluorescing-5;
     }
+}
+
+form {
+    display: flex;
+    gap: 15px;
 }
 
 .list-group-item {
@@ -44,19 +44,23 @@ form {
     border: none;
 
     border-radius: 25px 25px 25px 0;
+
+    float: left;
+    clear: both;
 }
 
 .chat-inbox-msg-res {
     margin-top: 15px;
-
-    background-color: lighten($color: $purple-fluorescing-5, $amount: 20);
     width: 200px;
     display: block;
     padding: 0.8rem;
-    color: $black;
     border: none;
-
+    color: $black;
     border-radius: 15px 15px 0 15px;
+    background-color: lighten($color: $purple-fluorescing-5, $amount: 20);
+
+    float: right;
+    clear: both;
 }
 
 .send-button {
@@ -79,4 +83,16 @@ form {
 
 .app-area {
     padding: 2rem;
+}
+
+@media screen and (max-width: 560px) {
+    #chat-messages {
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #chat-messages {
+        height: 88vh;
+    }
 }
